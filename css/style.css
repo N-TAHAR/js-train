@@ -6,7 +6,7 @@ body{
   overflow: hidden;
 }
 
-section{
+.section1{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -16,7 +16,7 @@ section{
   background: #000;
 }
 
-section img{
+.section1 img{
   position: absolute;
   top: 0;
   left: 16vw;
@@ -24,19 +24,18 @@ section img{
   width: auto;
   height: 100%;
   overflow: hidden;
+  transition: 1s;
 }
 
 .block{
   height: 10vh;
-  background-color: white;
-  transition: transform 1s, border 0.2s, margin 1s;
-}
+  background-color: white; 
+  opacity: 0.3;
+  transition: transform 1s, border 0.2s, margin 1s, opacity 1s;
+} 
 
 .is-over{
   transform: none;
-}
-
-.is-anim{
 }
 
 .block:not(:last-child){
@@ -73,4 +72,30 @@ section img{
   transform: translateX(40vw);
 }
 
+h1{
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;  
+  font-size: 40px;
+  color: White;
+  position: absolute;
+  top: 2vh;
+  left: 2vw;
+  opacity: 0;
+  transform: translateX(-200px) scale(0.2);
+  transition: opacity 1s, transform 1s;
+}
+
+.is-reveal{
+  opacity: 1;
+  transform : none;
+}
+
+
+/* Section2 */
+
+.section2{
+  height: 100vh;
+  width: 100vw;
+  background-color: black
+}
 
